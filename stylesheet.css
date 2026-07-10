@@ -141,6 +141,72 @@ span.highlight {
     border-radius: 10px;
 }
 
+.lang-toggle {
+  width: 100%;
+  max-width: 800px;
+  margin: 16px auto 0 auto;
+  text-align: right;
+}
+
+.lang-btn {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  color: #333333;
+  border-radius: 16px;
+  padding: 4px 12px;
+  margin-left: 6px;
+  cursor: pointer;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.lang-btn:hover {
+  border-color: #1772d0;
+  color: #1772d0;
+}
+
+.lang-btn.active {
+  background: #1772d0;
+  border-color: #1772d0;
+  color: #ffffff;
+}
+
+.lang-ja,
+.lang-zh-hans,
+.lang-zh-hant {
+  display: none;
+}
+
+body[data-lang="ja"] .lang-en,
+body[data-lang="ja"] .lang-zh-hans,
+body[data-lang="ja"] .lang-zh-hant {
+  display: none !important;
+}
+
+body[data-lang="ja"] .lang-ja {
+  display: revert !important;
+}
+
+body[data-lang="zh-hans"] .lang-en,
+body[data-lang="zh-hans"] .lang-ja,
+body[data-lang="zh-hans"] .lang-zh-hant {
+  display: none !important;
+}
+
+body[data-lang="zh-hans"] .lang-zh-hans {
+  display: revert !important;
+}
+
+body[data-lang="zh-hant"] .lang-en,
+body[data-lang="zh-hant"] .lang-ja,
+body[data-lang="zh-hant"] .lang-zh-hans {
+  display: none !important;
+}
+
+body[data-lang="zh-hant"] .lang-zh-hant {
+  display: revert !important;
+}
+
 @media screen and (max-width: 768px) {
   body {
     margin: 0;
@@ -191,5 +257,10 @@ span.highlight {
 
   .paper {
     line-height: 1.5;
+  }
+
+  .lang-toggle {
+    margin-top: 10px;
+    padding-right: 4px;
   }
 }
