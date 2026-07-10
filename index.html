@@ -607,10 +607,7 @@
             <tbody>
               <tr>
                 <td style="padding:0px">
-                  <div style="width: 100%; max-width: 250px; margin: 0 auto;">
-                    <script type="text/javascript" id="clustrmaps"
-                      src="https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=oZTzMHHUSMFOk4TDuzEM-I7dAUQbCSvkLDm9rthzV30&co=1e6ea6&cmo=c91313&cmn=13b513"></script>
-                  </div>
+                  <div id="clustrmaps-container" style="width: 100%; max-width: 250px; margin: 0 auto;"></div>
                   <br>
                   <p class="lang-en" style="text-align:right;">Website template stolen from <a href="https://jonbarron.info/" target="_blank"
                       rel="noopener noreferrer">Jon Barron</a>, with gratitude</p>
@@ -646,6 +643,25 @@
       var titleZhHans = '李俊杰 Jacky Li';
       var titleZhHant = '李俊杰 Jacky Li';
 
+      function loadClustrmaps() {
+        var container = document.getElementById('clustrmaps-container');
+        if (!container) {
+          return;
+        }
+
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.id = 'clustrmaps';
+        script.src = 'https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=oZTzMHHUSMFOk4TDuzEM-I7dAUQbCSvkLDm9rthzV30&co=1e6ea6&cmo=c91313&cmn=13b513';
+
+        // Keep the page stable even when the third-party domain is unreachable.
+        script.onerror = function () {
+          container.style.display = 'none';
+        };
+
+        container.appendChild(script);
+      }
+
       function setLanguage(lang) {
         body.setAttribute('data-lang', lang);
         document.documentElement.lang = lang === 'zh-hant' ? 'zh-Hant' : (lang === 'zh-hans' ? 'zh-Hans' : (lang === 'ja' ? 'ja' : 'en'));
@@ -661,6 +677,7 @@
       zhHansBtn.addEventListener('click', function () { setLanguage('zh-hans'); });
       zhHantBtn.addEventListener('click', function () { setLanguage('zh-hant'); });
       setLanguage('en');
+      loadClustrmaps();
     })();
   </script>
 </body>
