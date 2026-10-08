@@ -204,7 +204,9 @@ span.highlight {
 }
 
 .internship-callout {
-  padding: 8px 10px 18px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 8px 16px 18px;
   color: #b42318;
   text-align: left;
   line-height: 1.5;
