@@ -204,13 +204,31 @@ span.highlight {
 }
 
 .internship-callout {
+  max-width: 720px;
+  margin: 0 auto;
   padding: 8px 16px 18px;
+  color: #b42318;
   text-align: center;
   line-height: 1.5;
 }
 
 .internship-callout p {
   margin: 0;
+}
+
+.internship-callout a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.internship-callout a:hover,
+.internship-callout a:focus {
+  color: #7a1812;
+}
+
+.internship-term {
+  white-space: nowrap;
 }
 
 .education-list {
