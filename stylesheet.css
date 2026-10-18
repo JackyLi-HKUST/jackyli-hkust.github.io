@@ -134,6 +134,72 @@ span.highlight {
   background-color: #ffffd0;
 }
 
+.news-image-link {
+  margin-left: 4px;
+  border-bottom: 1px solid #d8d8d8;
+  color: #777777;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.news-image-link:focus,
+.news-image-link:hover {
+  border-bottom-color: #f09228;
+}
+
+.news-lightbox {
+  width: min(760px, calc(100vw - 32px));
+  max-width: none;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.28);
+}
+
+.news-lightbox::backdrop {
+  background: rgba(18, 18, 18, 0.52);
+}
+
+.news-lightbox-frame {
+  position: relative;
+  padding: 7px;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.news-lightbox img {
+  display: block;
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 3px;
+}
+
+.news-lightbox-close {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.58);
+  color: #ffffff;
+  cursor: pointer;
+  font: 400 20px/1 Arial, sans-serif;
+}
+
+.news-lightbox-close:focus,
+.news-lightbox-close:hover {
+  background: rgba(0, 0, 0, 0.78);
+}
+
 .colored-box {
     color: black;
     padding: 20px;
@@ -295,6 +361,16 @@ span.highlight {
   margin-top: 3px;
   color: #444444;
   line-height: 1.45;
+}
+
+.education-support {
+  margin-top: 3px;
+  color: #444444;
+  line-height: 1.45;
+}
+
+.collaborators-intro {
+  margin-top: 0;
 }
 
 .visitor-stats {
