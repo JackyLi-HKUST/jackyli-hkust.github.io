@@ -373,6 +373,15 @@ span.highlight {
   margin-top: 0;
 }
 
+.personal-section-copy p {
+  margin: 0 0 10px;
+  line-height: 1.55;
+}
+
+.personal-section-copy p:last-child {
+  margin-bottom: 2px;
+}
+
 .visitor-stats {
   padding: 12px 10px 26px;
   text-align: center;
