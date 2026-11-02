@@ -302,38 +302,46 @@ span.highlight {
 }
 
 .talk-item {
-  padding: 12px 4px;
-  line-height: 1.6;
+  padding: 16px 4px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.talk-item:last-child {
+  border-bottom: 0;
 }
 
 .talk-heading {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 8px 20px;
+  gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 6px;
 }
 
 .talk-title {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .talk-title a {
+  font-size: inherit;
   font-weight: inherit;
 }
 
 .talk-context {
-  margin: 0 0 4px;
+  margin: 3px 0 0;
+  color: #444444;
+  line-height: 1.45;
 }
 
 .talk-recordings {
   display: flex;
   flex-wrap: wrap;
   gap: 0 8px;
-  margin-top: 8px;
+  margin-top: 3px;
+  color: #444444;
+  line-height: 1.45;
 }
 
 .talk-recordings a {
@@ -341,7 +349,7 @@ span.highlight {
 }
 
 .talk-separator {
-  color: #777777;
+  color: #444444;
 }
 
 .education-list {
@@ -553,9 +561,23 @@ body[data-lang="zh-hant"] .lang-zh-hant {
     line-height: 1.5;
   }
 
+  .talks-list,
   .education-list {
     padding-right: 4px;
     padding-left: 4px;
+  }
+
+  .talk-item {
+    padding: 14px 0;
+  }
+
+  .talk-heading {
+    display: block;
+  }
+
+  .talk-title {
+    font-size: 14px;
+    line-height: 1.35;
   }
 
   .education-item {
