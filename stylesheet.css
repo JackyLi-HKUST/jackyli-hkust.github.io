@@ -297,6 +297,53 @@ span.highlight {
   white-space: nowrap;
 }
 
+.talks-list {
+  padding: 0 10px 4px;
+}
+
+.talk-item {
+  padding: 12px 4px;
+  line-height: 1.6;
+}
+
+.talk-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 20px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.talk-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.talk-title a {
+  font-weight: inherit;
+}
+
+.talk-context {
+  margin: 0 0 4px;
+}
+
+.talk-recordings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8px;
+  margin-top: 8px;
+}
+
+.talk-recordings a {
+  white-space: nowrap;
+}
+
+.talk-separator {
+  color: #777777;
+}
+
 .education-list {
   padding: 0 10px 4px;
 }
