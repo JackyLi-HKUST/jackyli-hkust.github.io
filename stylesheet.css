@@ -102,6 +102,14 @@ h2 {
   font-weight: 700;
 }
 
+.research-note {
+  display: block;
+  margin-top: 8px;
+  color: #666666;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 .name {
   padding-top: 20px;
   margin: 0;
